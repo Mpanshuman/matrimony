@@ -1,0 +1,24 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\preference.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+        <div class="addpreference">
+        <div class="addpreferencenav">
+            <ul>
+                <li><h1>Preference</h1></li>
+                <a href="{% url 'preferencedetails' user.id%}"><li><button id="btn-preferenceupdate">Update</button></li></a>        
+                </ul>
+        </div>
+        <div class="preferenceDetails">
+            
+        </div>
+    </div>
+        
+        
+    
+    
+{% endblock %}

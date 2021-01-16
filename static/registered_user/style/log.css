@@ -1,0 +1,65 @@
+body{
+	background:url("/static/registered_user/images/bg.jpg");
+	
+  overflow: auto;
+}
+#container{
+	width:26%;
+	margin-left: 60%;
+	border-radius: 25px;
+	background-color: rgba(44,62,80,0.7);
+	height: 500px;
+	
+    box-sizing: border-box;
+}
+label{
+	color: #FFFFFF;
+	
+	margin:1%;
+	font-weight: bold;
+}
+#register{
+	margin-top: 10%;
+	margin-left: 5%;
+}
+#user{
+	border: none;
+	outline: none;
+	background: transparent;
+	height: 40px;
+	color: #fff;
+	font-size: 15px;
+	border-bottom: 1px solid #fff;
+}
+#pass{
+	border: none;
+	outline: none;
+	background: transparent;
+	height: 40px;
+	color: #fff;
+	font-size: 15px;
+	border-bottom: 1px solid #fff;
+}
+.login{
+	margin-top: 10%;
+	width: 50%;
+	height: 30px;
+	display: grid;
+	background: yellow;
+	border: none;
+	outline: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding-top: 1%;
+	border-radius: 25px;
+	font-size: 1em;
+}
+.login:hover{
+	cursor: pointer;
+	background: white;
+	background: #fb2525;
+}
+.active{
+	background: #FFFFFF;
+	color: skyblue;
+}

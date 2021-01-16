@@ -1,0 +1,79 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+{% block headblock %}
+<link rel="stylesheet" href="{%static "non_registered_user\style\index.css"%}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
+
+{% block bodyblock %}
+     <div class="Background" >
+     {% include 'non_registered_user/navbar.html' %}
+        
+        <div class="Purpose">
+            <h1 id="purpose">"Best Place To Find Your Best Life Partner"</h1>
+            <a href="{%url 'explore'%}" id="explore_a"><button id="btn-explore">Explore Here</button><a>           
+        </div>
+       
+    </div>
+    </div>
+    <div class = "preference">
+    {% if user.is_authenticated and recomendation == True %}
+    {% for data,userimg in  userdata%}
+      <div class="mySlides">
+        <a href="{% url 'showprofile' data.id%}">
+        <div class= 'dbresult'>
+            
+             {% if membership.membership == "Premium"%}
+            
+            
+             {% if userimg == 'media/' %}
+            <div id="userpic"><img src="media/images/default_pic.png" alt="pic"></div>
+            
+            {% else %}
+            
+            <div id="userpic"><img src={{userimg}} alt="pic"></div>
+            {% endif %}
+            {% else %}
+            {% if userpic == 'media/' %}
+            <div id="userpicblur"><img src="media/images/default_pic.png" alt="pic" id='blurimg'></div>
+            
+            {% else %}
+            
+            <div id="userpicblur"><img src={{userpic}} alt="pic" id='blurimg'></div>
+            {% endif %}
+           {% endif %}
+            <div id="userdata">
+            
+            <div id="lefthalf">
+                <p><label>First Name:</label><span>{{data.FirstName}}</span></p>
+               <p> <label>Age:</label><span>{{data.age}}</span></p>
+               <p> <label>Gender:</label> <span>{{data.gender}}</span></p>
+
+            </div>
+            
+            <div id="righthalf">
+               <p> <label>Last Name:</label> <span>{{data.LastName}}</span></p>
+               <p> <label>Occupation:</label> <span>{{data.occupation}}</span></p>
+          	   <p> <label>Salary:</label> <span>{{data.salary}}</span></p>
+            
+            </div>
+
+            </div>
+            </div>
+        
+            </a>
+               <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+               <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+          </div>
+    {% endfor %} 
+  
+    {% endif %}
+    
+
+    {% include 'non_registered_user/footer.html' %}
+     <script src="{% static "non_registered_user\js\index.js" %}">
+     
+    </script> 
+     
+{% endblock %}

@@ -1,0 +1,73 @@
+.backcover{
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url("/static/non_registered_user/images/contactus_cover2.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.backcover h1{
+    text-align: center;
+    color: #fff;
+    margin-top: 25vh;
+}
+
+.enquiryblock{
+    margin-top: 20px;
+    margin-left: 30%;
+    
+}
+
+.enquiryblock form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.enquiryblock form input{
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.enquiryblock form textarea{
+    height: 30px;
+    margin-bottom: 5px;
+    height: 135px;
+    width: 641px;
+    resize: none;
+}
+
+#btn-submit_message{
+    background-color: rgb(240, 240, 6);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+#btn-submit_message:hover{
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border: 3px solid yellow;
+    text-decoration: none;
+}
+.enquiryblock form label{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(173, 171, 171);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(173, 171, 171);
+  }

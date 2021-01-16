@@ -1,0 +1,46 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{%static "registered_user\style\log.css"%}">
+</head>
+
+<body>
+    {% include 'registered_user/navbar.html' %}
+    <div id="container">
+        {% csrf_token %}
+        <form action="login" method="POST" id="form-login" name="login">
+        {% csrf_token %}
+            <ul class="nav nav-tabs">
+  <li role="presentation" ><a href="login" class="active">Login</a></li>
+  <li role="presentation" ><a href="register">Register</a></li>
+  
+</ul>
+        <label for="user" style="margin-top: 3%">Enter your Username</label><br>
+        <input type="text" name="loginusername"  id="user" size="40" required placeholder="Enter your Username"><br>
+
+        <label for="password">Create Password</label><br>
+        <input type="Password" name="loginpassword" id="pass" size="40" required placeholder="Enter your password"><br>
+
+        <input type="submit" value="submit" class="login"  id="btn-login1">
+        </form>
+    </div>
+        <div>
+            {% for message in  messages%}
+            <h3>{{message}}</h3>
+            {% endfor %}
+        </div>
+     {% include 'non_registered_user/footer.html' %}
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+</body>
+</html>

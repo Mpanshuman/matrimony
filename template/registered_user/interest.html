@@ -1,0 +1,114 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\explore.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+    {% include 'registered_user/navbar.html' %}
+    
+    <div class= 'searchResult'> 
+        {% if interestedUsers%}
+        {% for userinfo,userpic in interestedUsers %}
+        <div class= 'dbresult'>
+            {% if membership.membership == "Premium" %}
+            
+            {% if userpic == 'media/' %}
+            <div id="userpic"><img src="media/images/default_pic.png" alt="pic"></div>
+            
+            {% else %}
+            
+            <div id="userpic"><img src={{userpic}} alt="pic"></div>
+            {% endif %}
+
+            {% else %}
+            {% if userpic == 'media/' %}
+            <div id="userpicblur"><img src="media/images/default_pic.png" alt="pic" id='blurimg'></div>
+            
+            {% else %}
+            
+            <div id="userpicblur"><img src={{userpic}} alt="pic" id='blurimg'></div>
+            {% endif %}
+
+            {% endif %}  
+            {% if membership.membership == "Premium" %}
+            <div id="userdata">
+            <div id="lefthalf">
+                <p><label>First Name:</label><span>{{userinfo.FirstName}}</span></p>
+               <p><label>Father's Name:</label><span>Fa Name</span></p>
+               <p> <label>Age:</label><span>{{userinfo.age}}</span></p>
+               <p> <label>Gender:</label> <span>Gender</span></p>
+               
+
+            </div>
+            <div id="righthalf">
+               <p> <label>Last Name:</label> <span>{{userinfo.LastName}}</span></p>
+                <p><label>Mother's Name:</label><span> Mo Name</span></p>
+               <p> <label>Occupation:</label> <span>{{userinfo.occupation}}</span></p>
+               <span><a href="{% url 'showprofile' userinfo.id%}"><button id="btn-showprofile">Show Profile</button></a></span>
+               <span><a href="#"><form action="" method="POST" > {% csrf_token %} <button id="btn-interest" value={{userinfo.user_id}} name="remove">Remove</button></a></span></form>
+            </div>
+            </div>
+            </div>
+
+            {% else %}
+
+            <div id="userdata">
+            <div id="lefthalf">
+                <p><label>First Name:</label><span>{{userinfo.FirstName}}</span></p>
+               <p><label>Father's Name:</label><span>Fa Name</span></p>
+               <p> <label>Age:</label><span>{{userinfo.age}}</span></p>
+               <p> <label>Gender:</label> <span>Gender</span></p>
+               
+
+            </div>
+            <div id="righthalf">
+               <p> <label>Last Name:</label> <span>{{userinfo.LastName}}</span></p>
+                <p><label>Mother's Name:</label><span> Mo Name</span></p>
+               <p> <label>Occupation:</label> <span>{{userinfo.occupation}}</span></p>
+               <span><a href="{% url 'choosemembership' user.id%}"><button id="btn-showprofile">Upgrade to Premium</button></a></span>
+               <span><a href="#"><form action="" method="POST" > {% csrf_token %} <button id="btn-interest" value={{userinfo.user_id}} name="remove">Remove</button></a></span></form>
+            </div>
+            </div>
+            </div>
+            {% endif %}
+            
+        {% endfor %}   
+        {% else %}
+        
+        <div id='noresult'><p>You Have Not Show Interest in Any Users</p>
+        </div>
+        {% endif %}
+        </div>
+            <div id="page">
+                <div id = "pagenav">
+                {% if interestedUsers %}
+                {% if interestedUsers.has_previous %}
+                <a href="{% url 'interest' %}?page={{userdetails.previous_page_number}}"> &laquo; </a>
+                {% endif %}
+                {% for page in interestedUsers.paginator.page_range %}
+                {% if interestedUsers.number == page %}
+                <a class="active" href="{% url 'explore' %}?page={{page}}"> {{page}} </a>
+                {% else %}
+                <a  href="{% url 'interest' %}?page={{page}}"> {{page}} </a>
+                {% endif %}
+            
+                {% endfor %}
+                {% if interestedUsers.has_next %}
+                <a href="{% url 'interest' %}?page={{userdetails.next_page_number}}"> &raquo;</a>
+                {% endif %}
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+   
+{% endblock %}
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+      }
+   </script>

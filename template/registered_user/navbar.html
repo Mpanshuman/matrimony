@@ -1,0 +1,51 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\navbar2.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+<div class="navbar">
+            <div class="nav-link">
+                <ul>
+                    <a href="{%url 'index'%}">
+                        <li class="nav active">HOME</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav">ABOUT US</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav">WHY US?</li>
+                    </a>
+                    <a href="{%url 'contactus'%}">
+                        <li class="nav">CONTACT US</li>
+                    </a>
+                   {% if user.is_authenticated %}
+                       
+                       <a href="{%url 'interest'%}">
+                       <li class='nav'>INTERESTS</li>
+                       </a>
+                       <a href="{%url 'explore'%}">
+                       <li class='nav'>SEARCH</li>
+                       </a>
+                       <a href="{%url 'userprofile'%}">
+                       <li class='nav'>{{user.username}} PROFILE</li>
+                       </a>
+                        <li class="dropdown">
+                        <a  class="dropbtn">Manage Account</a>
+                        <div class="dropdown-content">
+                        <a href="{%url 'userprofile'%}">Show Profile</a>
+                        <a href="{%url 'accountsetting'%}">Account Setting</a>
+                        <a href="{%url 'logout'%}">Log out</a>
+                        </div>
+                    </li>             
+                       
+                    {% else %}
+                   <a href="{%url 'login'%}"><button id="btn-login">Log In</button></a>
+                   <a href="{%url 'registeruser'%}"><button id="btn-reg">Register</button></a>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+{% endblock  %}

@@ -1,0 +1,58 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\showuserinfo.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+<div class="addpersonalinfo">
+    <div class="addpersonalinfonav">
+    {% if  membership.membership == "Premium"%}
+        <ul>
+            <li><h1>Personal Details</h1></li>
+            <a href="mailto:{{userdata.email}}"><li><button id="btn-personalupdate">Mail Them</button></li></a>    
+            </ul>
+           
+    </div>
+</div>
+    <div class="personalDetails">
+        <div class="leftside">
+            <p><label>Salary :</label><span>{{userdata.salary}}</span></p>
+            <p><label>Caste :</label><span>{{userdata.caste}}</span></p>
+            <p><label>Address :</label><span>{{userdata.address}}</span></p>
+            <p><label>Contact Number :</label><span><a href="tel:{{userdata.phone}}">{{userdata.phone}}</a></span></p>
+        </div>
+        <div class="rightside">
+        <p><label>Religion :</label><span>{{userdata.religion}}</span></p>
+        <p><label>DOB :</label><span>{{userdata.dateofbirth}}</span></p>
+        <p><label>Age :</label><span>{{userdata.age}}</span></p>
+        <p><label>Email Adress :</label><span>{{userdata.email}}</span></p>
+        </div>
+    </div>
+    {% else %}
+        <ul>
+            <li><h1>Personal Details</h1></li>
+            <a href="{% url 'accountsetting'%}"><li><button id="btn-personalupdate">Upgrade to Premium</button></li></a>    
+            </ul>
+           
+    </div>
+</div>
+    <div class="personalDetails">
+        <div class="leftside">
+            <p><label>Salary :</label><span>{{userdata.salary}}</span></p>
+            <p><label>Caste :</label><span>{{userdata.caste}}</span></p>
+             <p><label>Address :</label><span>{{userdata.address}}</span></p>      
+        </div>
+        <div class="rightside">
+        <p><label>Religion :</label><span>{{userdata.religion}}</span></p>
+        <p><label>DOB :</label><span>{{userdata.dateofbirth}}</span></p>
+        <p><label>Age :</label><span>{{userdata.age}}</span></p>
+        </div>
+    </div>
+    {% endif %}
+        
+        
+    
+    
+{% endblock %}

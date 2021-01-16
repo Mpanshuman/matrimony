@@ -1,0 +1,48 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\showuserparentsinfo.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+        <div class="addpersonalinfo">
+    <div class="addpersonalinfonav">
+    {% if  membership.membership == "Premium"%}
+        <ul>
+            <li><h1>Parent Details</h1></li>
+             <a href="mailto:{{parentdata.fathers_email}}"><li><button id="btn-personalupdate">Mail Them</button></li></a>  
+            </ul>
+    </div>
+</div>
+    <div class="personalDetails">
+        <div class="leftside">
+            <p><label>Father's Name :</label><span>{{parentdata.fathers_name}}</span></p>
+            <p><label>Father's Phone :</label><span><a href="tel:{{parentdata.fathers_phn}}">{{parentdata.fathers_phn}}</a></span></p>
+            <p><label>Father's Email :</label><span>{{parentdata.fathers_email}}</span></p>
+        </div>
+        <div class="rightside">
+        <p><label>Mother's Name :</label><span>{{parentdata.mothers_name}}</span></p>
+        <p><label>Mother's Phone :</label><span><a href="tel:{{parentdata.fathers_phn}}">{{parentdata.mothers_phn}}</a></span></p>
+        <p><label>Mother's Email :</label><span>{{parentdata.mothers_email}}</span></p>
+        </div>
+    </div>
+    {% else %}
+    <ul>
+            <li><h1>Parent Details</h1></li>
+             <a href="{% url 'accountsetting'%}"><li><button id="btn-personalupdate">Upgrade to Premium</button></li></a> 
+            </ul>
+    </div>
+</div>
+    <div class="personalDetails">
+        <div class="leftside">
+            <p><label>Father's Name :</label><span>{{parentdata.fathers_name}}</span></p>
+        </div>
+        <div class="rightside">
+        <p><label>Mother's Name :</label><span>{{parentdata.mothers_name}}</span></p>
+        </div>
+    </div>
+        {% endif %} 
+    
+    
+{% endblock %}

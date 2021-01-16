@@ -1,0 +1,27 @@
+<html>
+    <body>
+        {{ userdata }}
+        {% if userdata %}
+        <ul>
+            {% for v in userdata %}
+            <li> {{v.FirstName}}</li>
+            <li>{{v.MiddleName}}</li>
+            <li>{{v.LastName}}</li>
+            <li>{{v.createdfor}}</li>
+            <li>{{v.occupation}}</li>
+            <li>{{v.age}}</li>
+            <li>{{v.dateofbirth}}</li>
+            <li>{{v.religion}}</li>
+            <li>{{v.address}}</li>
+            <li>{{v.phone}}</li>
+            <li>{{v.email}}</li>
+            <li>{{v.gender}}</li>
+            <li>{{v.profile_pic}}</li>
+            
+               {% endfor %}</ul>
+        {% else %}
+        <p>no userdata</p>
+        {% endif %}
+
+    </body>
+</html>MiddleNameLastName createdforoccupationagedateofbirth religion addressphone email gender profile_pic

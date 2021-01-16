@@ -1,0 +1,60 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\choosemembership.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+   
+   <div class="mainbody">
+   	<div class="month three">
+   		<h3>3 Months</h3>
+   		<hr>
+   		<h5>Benefits:</h5>
+   		<ul>
+   			<li>can see contact details</li>
+   			<li>can see profile pic</li>
+   			<li>can see send message</li>
+   		</ul>
+   		<hr>
+           <form action="" method="POST">
+           {% csrf_token %}
+            <a href="#"><button id="btn-pay" value=3 name='btn'>Subscribe</button></a>
+            </form>
+   	</div>
+   	<div class="month six">
+   		<h3>6 Months</h3>
+   		<hr>
+   		<h5>Benefits:</h5>
+   		<ul>
+   			<li>can see contact details</li>
+   			<li>can see profile pic</li>
+   			<li>can see send message</li>
+   		</ul>
+   		<hr>
+        <form action="" method="POST">
+        {% csrf_token %}
+        <a href="#"><button id="btn-pay" value=6 name='btn'>Subscribe</button></a>
+        </form>
+   		
+
+   	</div>
+   	<div class="month twelve">
+   		<h3>12 Months</h3>
+   		<hr>
+   		<h5>Benefits:</h5>
+   		<ul>
+   			<li>can see contact details</li>
+   			<li>can see profile pic</li>
+   			<li>can see send message</li>
+   		</ul>
+   		<hr>
+           <form action="" method="POST">
+           {% csrf_token %}
+            <a href="#"><button id="btn-pay" value=12 name='btn'>Subscribe</button></a>
+            </form>
+   	</div>
+   </div>
+    
+{% endblock %}

@@ -1,0 +1,64 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="{%static "registered_user\style\reg.css"%}">
+</head>
+<body>
+    
+    {% include 'registered_user/navbar.html' %}
+    <div id="container">
+        <form action="register" method="POST" id="register" name="register">
+            {% csrf_token %}
+            <ul class="nav nav-tabs">
+  <li role="presentation" ><a href="login">Login</a></li>
+  <li role="presentation" class="active"><a href="register">Register</a></li>
+  
+</ul>   
+        <label>UserName</label><br>
+        <input type="text" name="username" id="username" class="username" placeholder="Enter your Username"><br>
+        <label for="email" style="margin-top: 3%">Enter your Email Id</label><br>
+        <input type="email" name="emailaddress" id="emailid" size="40"  placeholder="Enter your Email"><br>
+
+        <label for="password">Create Password</label><br>
+        <input type="Password" name="password" id="password" size="40"  placeholder="Create your password"><br>
+        <input type="number" name="phone" id="phn" class="mobile" placeholder="Enter your Mobile no." required min="100000000" max="9999999999"><br>
+
+        <!-- <label for="profile" style="margin-top: 3%">Create Profile For<br>
+        <select name="profile" id="profile" style="color: #000000">
+        <option value="select">-- Please Select --</option>
+        <option value="self" selected>Self</option>
+        <option value="son">Son</option>
+        <option value="daughter">Daughter</option>
+        <option value="brother">Brother</option>
+        <option value="sister">Sister</option>
+        <option value="friend">Friend</option>
+        <option value="relative">Relative</option>
+        </select><br></label><br> -->
+        
+        <label>I am a 
+        <input type="radio" name="sex" id="male" value="Male"  style="color: white">Male
+        <input type="radio" name="sex" id="female" value=Female style="color: white">Female<br></label>
+        
+        <input type="submit" value="submit" id="btn-login1" class="next">
+    </form>
+</div>
+        <div>
+            {% for message in  messages%}
+            <h3>{{message}}</h3>
+            {% endfor %}
+        </div>
+     {% include 'non_registered_user/footer.html' %}
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+</body>
+</html>

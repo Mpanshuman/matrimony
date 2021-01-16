@@ -1,0 +1,23 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+{% block headblock %}
+<link rel="stylesheet" href="{%static "non_registered_user\style\footer.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+  <div class="footer">
+        <div class="nav-links-footer">
+            <a href="#">About us</a>
+            <a href="#">Why us</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="social-links">
+            
+            <p>Reach Out To Us On:</p>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube"></i>
+        </div>
+    </div>
+{% endblock  %}

@@ -1,0 +1,49 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\showprofile.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+    {% include 'registered_user/navbar.html' %}
+    <div class='Userprofile'>
+            {% if membership.membership == "Premium" %}
+            {% if image.imagefile%}
+           
+           
+            <img src='{{ MEDIA_URL }}{{ image.imagefile}}' alt="profile pic" width="240" height="180"></img>        
+            
+            {% else %}
+           
+             <img class="Profile_pic" src="{{ MEDIA_URL }}{{default}}"></img>
+             {% endif %} 
+             
+             {% else %}
+             
+            {% if image.imagefile%}
+            <img src='{{ MEDIA_URL }}{{ image.imagefile}}' alt="profile pic" width="240" height="180" class="Profile_pic_blur"></img>        
+            
+            {% else %}
+           
+             <img class="Profile_pic_blur" src="{{ MEDIA_URL }}{{default}}"></img>
+
+            
+            {% endif %}    
+            {% endif %}
+            
+            <div class="Basic_info">
+                <p><label>First Name: </label><label>{{userdata.FirstName}}</label></p>
+                <p><label>Last Name: </label><label>{{userdata.LastName}}</label></p>
+                <p><label>Age: </label><label>{{userdata.age}}</label></p>
+                <p><label>Date Of Birth: </label><label>{{userdata.dateofbirth}}</label></p>
+                <p><label>Religion: </label><label>{{userdata.religion}}</label></p>
+                <p><label>Gender: </label><label>{{userdata.gender}}</label></p>
+                <p><label>Occupation: </label><label>{{userdata.occupation}}</label></p>
+            </div>
+            
+        </div>
+    {% include 'registered_user/showuserinfo.html' %}
+    {% include 'registered_user/showuserparentsinfo.html' %}
+     {% include 'non_registered_user/footer.html' %}
+{% endblock %}

@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.Background{
+
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url("/static/non_registered_user/images/backgroud.jfif");
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+
+.Purpose{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.Purpose h1{
+    color: #fff;
+
+}
+
+#btn-explore{
+    margin-top: 20px;
+    background-color: rgb(240, 240, 6);
+    color: black;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+
+
+#btn-explore:hover{
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+.Result{
+    margin-left: 30px;
+    margin-right: 10px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+
+
+.dbresult{
+    display: flex;
+    margin-left:200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    width: 75%;
+    height: 20vh;
+    border-radius: 12px;
+    
+}
+img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transform: scale(1.03);
+}
+#blurimg{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: 8px -10px -10px -5px;
+
+}
+
+#userpicblur{
+    width: 25%;
+    border-right: 1px solid black;
+    margin-right: 50px;
+    filter: blur(10px);
+    overflow: hidden;
+    
+}
+
+#userpic{
+    width: 25%;
+    border-right: 1px solid black;
+    margin-right: 50px;
+}
+
+p{
+    margin-bottom: 15px;
+    
+}
+span{
+
+    margin-right: 30px;
+}
+
+label{
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#userdata{
+    
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+#lefthalf{
+    margin-top: 15px;
+    
+    
+}
+#righthalf{
+    margin-top: 15px;
+    margin-left: 20%;
+    
+}
+  
+
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover p{
+  color: black;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+.mySlides {display:none;}
+.w3-button{
+    margin-top: 500px;
+}

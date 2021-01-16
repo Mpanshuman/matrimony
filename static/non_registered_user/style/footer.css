@@ -1,0 +1,28 @@
+.footer{
+    display: flex;
+    background-color: rgb(20, 19, 19);
+    color: #fff;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.social-links i{
+    margin-top: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    
+}
+
+.nav-links-footer a{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    
+}
+
+.nav-links-footer a{
+    text-decoration: none;
+    color: #fff;
+}
+

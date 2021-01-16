@@ -1,0 +1,163 @@
+.dbresult{
+    display: flex;
+    margin-left:50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    width: 90%;
+    height: 20vh;
+    border-radius: 12px;
+    
+}
+img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transform: scale(1.03);
+}
+#blurimg{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: 8px -10px -10px -5px;
+
+}
+
+#userpicblur{
+    width: 25%;
+    border-right: 1px solid black;
+    margin-right: 50px;
+    filter: blur(10px);
+    overflow: hidden;
+    
+}
+
+#userpic{
+    width: 25%;
+    border-right: 1px solid black;
+    margin-right: 50px;
+}
+
+p{
+    margin-bottom: 15px;
+    
+}
+span{
+
+    margin-right: 30px;
+}
+
+label{
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#userdata{
+    
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+#lefthalf{
+    margin-top: 15px;
+    text-decoration: underline;
+    
+}
+#righthalf{
+    margin-top: 15px;
+    margin-left: 20%;
+    text-decoration: underline;
+}
+  
+#noresult{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    font-weight: bolder;
+    width: 70%;
+}
+
+#noresult p{
+    margin-top: 20px;
+}
+#noresult ul{
+    margin-bottom: 20px;
+}
+
+#page{
+
+    text-align: center;
+}
+
+#pagenav {
+  display: inline-block;
+}
+#pagenav a.active {
+    background-color: yellow;
+    color: black;
+    border: 1px solid #ddd;
+  }
+  
+
+
+#pagenav a {
+  color:#ddd;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  background-color: black;
+}
+
+#pagenav  a:hover:not(.active) {background-color:yellow;color: black;}
+
+
+#btn-showprofile{
+    margin-top: -5px;
+    background-color: rgb(240, 240, 6);
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+#btn-showprofile:hover{
+    background-color: black;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration: none;
+    color: #fff;
+}
+
+#btn-interest{
+    margin-top: -5px;
+    background-color: rgb(240, 240, 6);
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+#btn-interest:hover{
+    background-color: black;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration: none;
+    color: #fff;
+}

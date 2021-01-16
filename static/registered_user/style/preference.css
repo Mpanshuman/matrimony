@@ -1,0 +1,46 @@
+.addpreference{
+    display: flex;
+    padding: 20px 120px;
+    margin-top: 50px;
+    margin-left: 30px;
+    
+}
+
+.addpreferencenav {
+    flex: 1;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 12px;
+    
+}
+
+.addpreferencenav ul{
+    margin-left: 10px;
+    display: inline;
+}
+
+.addpreferencenav ul li{
+    list-style: none;
+    padding: 5px 10px;
+    display: inline-block;   
+}
+
+#btn-preferenceupdate{
+    margin-top: -50px;
+    margin-left: 78vw;
+    background-color: rgb(240, 240, 6);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#btn-preferenceupdate:hover{
+    background-color: black;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration: none;
+    color: #fff;
+}

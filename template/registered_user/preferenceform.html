@@ -1,0 +1,16 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+
+{% endblock %}
+
+{% block bodyblock %}
+        <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-save">Save</button>
+        </form>
+    
+    
+{% endblock %}

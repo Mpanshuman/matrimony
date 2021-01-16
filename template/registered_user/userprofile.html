@@ -1,0 +1,39 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\userprofile.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+    {% include 'registered_user/navbar.html' %}
+
+        <div class='Userprofile'>
+            {% if image_details.imagefile%}
+            
+            <!--<img class="Profile_pic" src=" {{ img.imagefile }} " alt="profile pic" width="240" height="200px" />-->
+            <img src='{{ MEDIA_URL }}{{ image_details.imagefile}}' alt="profile pic" width="240" height="180"></img>        
+            
+            {% else %}
+           
+             <img class="Profile_pic" src="media/images/default_pic.png"></img>
+            
+                
+            {% endif %}
+            
+            <div class="Basic_info">
+                <p><label>Name: </label><label>{{UserName}}</label></p>
+                <p><label>Email: </label><label>{{UserEmail}}</label></p>
+                <p><label>Mobile: </label><label>{{UserPhone}}</label></p>
+                <p><label>Age: </label><label>{{UserData.age}}</label></p>
+                <p><label>Religion: </label><label>{{UserData.religion}}</label></p>
+                <p><label>Gender: </label><label>{{UserData.gender}}</label></p>
+            </div>
+            <a href="{% url 'showimage' user.id%}">image page</a>
+        </div>
+        
+    {% include 'registered_user/addpersonalinfo.html' %}
+    {% include 'registered_user/addparentsinfo.html' %}
+    {% include 'registered_user/preference.html' %}
+     {% include 'non_registered_user/footer.html' %}
+{% endblock %}

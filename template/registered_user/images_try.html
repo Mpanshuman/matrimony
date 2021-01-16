@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Upload Images</title>
+</head>
+<body>
+
+<h1>Image Uploader</h1>
+<form enctype="multipart/form-data" method="POST" action="">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Upload"/>
+</form>
+
+<br><br>
+{% if imagefile.imagefile %}
+
+
+<img src='{{ MEDIA_URL }}{{ imagefile.imagefile }}' width="240" height="240" alt="profile pic">
+<br><br>
+
+{% else %}
+<!--<img class="Profile_pic" src=" {{ MEDIA_URL }} {media/images/defaultpic.png" ></img>-->
+<img class="Profile_pic" src="/media/images/default_pic.png" width="240" height="240"></img>
+
+
+
+<p>there is no last image</p>
+{% endif %}
+</body>
+</html>

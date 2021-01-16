@@ -1,0 +1,105 @@
+body{
+	background:#F0F3F4;
+	
+ 
+  align-items: center;
+  overflow: auto;
+}
+.container{
+	width: 45%;
+	height: 600px;
+	background: #FFFFFF;
+	margin: none;
+	border: none;
+	margin-left: 30%;
+	
+}
+
+label{
+	color: #7B7D7D;
+	margin:1% 10% 0 10%;
+	font-weight: bold;
+}
+h3{
+	
+	
+	line-height: 1.2em;
+	padding-top: 20px;
+	margin-left: 5%;
+}
+button{
+	margin-left: 40%;
+	border:none;
+	width: 20%;
+	border-radius: 20px;
+	height: 40px;
+	margin-top: 5%;
+	 background:#F0FF00;
+	box-sizing: border-box;
+}
+
+#id_fathers_name{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 2.2%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	
+}
+#id_mothers_name{
+
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 1%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+}
+#id_fathers_phn{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 4%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+}
+#id_mothers_phn{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 3%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+}
+#id_fathers_email{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 2.2%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+}
+#id_mothers_email{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 1.8%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+}
+#id_address{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 8%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+}

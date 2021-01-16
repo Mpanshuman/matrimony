@@ -1,0 +1,158 @@
+body{
+	background:#F0F3F4;
+  	align-items: center;
+  	overflow: auto;
+}
+.container{
+	width: 45%;
+	height: 700px;
+	background: #FFFFFF;
+	margin: none;
+	border: none;
+	margin-left: 30%;
+	
+}
+
+label{
+	color: #7B7D7D;
+	margin:1% 10% 0 10%;
+	font-weight: bold;
+}
+
+#id_FirstName{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	margin-left: 2.2%;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+
+}
+#id_MiddleName{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_LastName{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-left: 3%;
+}
+
+h3{
+	
+	
+	line-height: 1.2em;
+	padding-top: 20px;
+	margin-left: 5%;
+}
+#id_createdfor{
+	width: 40%;
+	margin-left: 2%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_occupation{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	margin-left: 1%;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_age{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+	margin-left: 8.5%;
+}
+#id_dateofbirth{
+	width: 40%;
+	margin-left: 1%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_religion{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	margin-left: 4%;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_address{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	margin-left: 4%;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_phone{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	margin-left: 6%;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_email{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	margin-left: 6%;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+#id_gender{
+	width: 40%;
+	height: 30px;
+	color: #000000;
+	font-size: 15px;
+	border-radius: 5px;
+	margin-left: 4.7%;
+	border: 1px solid #7B7D7D;
+	margin-right: 3%;
+}
+button{
+	margin-left: 40%;
+	border:none;
+	width: 20%;
+	border-radius: 20px;
+	height: 40px;
+	margin-top: 5%;
+	
+    background:#F0FF00;
+	box-sizing: border-box;
+}

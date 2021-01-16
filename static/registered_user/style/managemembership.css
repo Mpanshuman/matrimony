@@ -1,0 +1,58 @@
+.mainbody{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border: 2px solid black;
+    justify-content: center;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  
+  }
+  
+  .leftside{
+    margin-right: 50px; 
+  }
+
+.leftside p{
+      margin: 20px 0px 20px 0px;
+  }
+  
+.rightside p{
+    margin: 20px 0px 20px 0px;
+}
+
+
+  
+  .btn-choise{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 25%;
+    margin-bottom: 50vh;
+  
+  }
+  
+  #btn-cancel,#btn-extend{
+      
+        background-color: rgb(240, 240, 6);
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.5s;
+       
+    }
+    
+    #btn-cancel:hover,#btn-extend:hover{
+        background-color: black;
+        cursor: pointer;
+        border: 2px solid black;
+        text-decoration: none;
+        color: #fff;
+    }

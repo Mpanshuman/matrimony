@@ -1,0 +1,24 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\addpersonalinfo.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+        <div class="addpersonalinfo">
+        <div class="addpersonalinfonav">
+            <ul>
+                <li><h1>Personal Details</h1></li>
+                <a href="{% url 'userdetails' user.id%}"><li><button id="btn-personalupdate">Update</button></li></a>  
+                </ul>
+        </div>
+        <div class="personalDetails">
+            
+        </div>
+    </div>
+        
+        
+    
+    
+{% endblock %}

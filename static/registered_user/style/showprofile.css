@@ -1,0 +1,33 @@
+.Userprofile{
+    margin-top: 10px;
+    margin-left: 15vw;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 25vh;
+    border: 2px solid black;
+}
+
+.Profile_pic{
+    width: 30%;
+    background-color: red;
+}
+.Profile_pic_blur{
+    filter: blur(10px);
+    overflow: hidden;
+    width: 30%;
+    margin: 8px -10px -10px 15px;
+}
+
+.Basic_info{
+    margin-top: 5px;
+    margin-left: 5vw;
+    
+}
+
+.Basic_info p{
+    margin-bottom: 7px;
+    border-bottom: 2px solid rgb(54, 54, 52);
+}

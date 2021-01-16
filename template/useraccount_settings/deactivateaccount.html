@@ -1,0 +1,34 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+{% block headblock %}
+<link rel="stylesheet" href="{%static "useraccount_settings\style\changepassword.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+
+<div class="main_form">
+	<h3>Deactivate Account</h3>
+    <hr>
+    <form action="" method="POST" >
+        {% csrf_token %}
+     	<div class="changepass_form">
+         <div class="leftside">
+                <label >Enter Password :</label>
+         </div>
+         
+         <div class="rightside">
+         	<input type="Password" id="cnfpassword" name="cnfpassword" placeholder="Enter Password" required>
+         </div>
+
+         </div>
+
+         <div class="changepassbtndiv"><button id="changepassbtn" type="submit" name="deactivatebtn">Deactivate Account</button></div>
+    
+    </form>
+    </div>
+    <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+      }
+    </script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static ""%}">
+{% endblock %}
+
+{% block bodyblock %}
+    {% include 'registered_user/navbar.html' %}
+        {% csrf_token %}
+        <form action="otpcheck" method="POST">
+        {% csrf_token %}
+            OTP:<input type="text" name="otp" placeholder = "Enter OTP"><br>
+            <input type="submit" value="submit" id="btn-login1">
+        </form>
+
+        <div>
+            {% for message in  messages%}
+            <h3>{{message}}</h3>
+            {% endfor %}
+        </div>
+     {% include 'non_registered_user/footer.html' %}
+{% endblock %}

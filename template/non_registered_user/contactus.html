@@ -1,0 +1,26 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+{% block headblock %}
+<link rel="stylesheet" href="{%static "non_registered_user\style\contactus.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+<div class="backcover">
+    {% include 'non_registered_user/navbar.html' %}
+    <h1>Contact Us</h1>
+</div>
+
+<div class="enquiryblock">
+    <form class="message_details">
+        <label>Name:-</label>
+        <input type="text" name="username" id="username" placeholder="Full Name">
+        <label>Email Address:-</label>
+        <input type="email" name="useremail" id="useremail" placeholder="Email Address">
+        <label>Your Query/Message:-</label>
+        <textarea name="query_message" id="query_message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="submit" id="btn-submit_message">
+        
+    </form>
+</div>
+{% include 'non_registered_user/footer.html' %}
+{% endblock %}

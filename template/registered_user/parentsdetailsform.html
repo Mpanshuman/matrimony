@@ -1,0 +1,17 @@
+{% extends 'non_registered_user/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{%static "registered_user\style\parentdetailsform.css"%}">
+{% endblock %}
+
+{% block bodyblock %}
+{% include 'registered_user/navbar.html' %}
+        <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-save">Save</button>
+        </form>
+    
+    
+{% endblock %}
